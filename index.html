@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
     <link href="./css/styles.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -12,31 +16,35 @@
     <title>Studio</title>
   </head>
   <body>
-    <header>
-        <a class="logo-top" href="/">
-            <span class="logo-element">Web</span>Studio
-        </a>
-      
+    <header class="headline container">
+      <a class="logo-top" href="/">
+        <span class="logo-element">Web</span>Studio
+      </a>
+
       <nav>
-        <ul class="list">
-          <li>
-            <a class="menu link" href="./index.html">Agencja</a>
+        <ul class="menu-list">
+          <li class="menu">
+            <a class="menu-link link" href="./index.html">Agencja</a>
           </li>
-          <li>
-            <a class="menu link" href="./portfolio.html">Portfolio</a>
+          <li class="menu">
+            <a class="menu-link link" href="./portfolio.html">Portfolio</a>
           </li>
-          <li>
-            <a class="menu link" href="#address">Kontakt</a>
+          <li class="menu">
+            <a class="menu-link link" href="#address">Kontakt</a>
           </li>
         </ul>
       </nav>
 
-      <ul class="list">
-        <li>
-          <a class="top-contacts link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+      <ul class="top-contacts-list">
+        <li class="top-contacts">
+          <a class="top-contacts-link link" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
         </li>
-        <li>
-          <a class="top-contacts link" href="tel:+48111111111">+48 111 111 111</a>
+        <li class="top-contacts">
+          <a class="top-contacts-link link" href="tel:+48111111111"
+            >+48 111 111 111</a
+          >
         </li>
       </ul>
     </header>
@@ -48,8 +56,8 @@
         <button type="button" class="top-button">Zamów usługe</button>
       </div>
 
-      <section>
-        <ul class="text list">
+      <section class="container section">
+        <ul class="text-list">
           <li>
             <h3 class="text-title">LOREM IPSUM</h3>
             <p class="text-content">
@@ -83,8 +91,8 @@
         <h2 class="gallery-title">Czym się zajmujemy</h2>
 
         <div>
-          <ul class="list">
-            <li>
+          <ul class="gallery-list">
+            <li class="gallery-item">
               <img
                 src="images/img(1).jpg"
                 alt="a person writing code on a tablet"
@@ -92,7 +100,7 @@
                 height="294"
               />
             </li>
-            <li>
+            <li class="gallery-item">
               <img
                 src="images/img(2).jpg"
                 alt="a person looking at the phone in front of a computer"
@@ -100,7 +108,7 @@
                 height="294"
               />
             </li>
-            <li>
+            <li class="gallery-item">
               <img
                 src="images/img(3).jpg"
                 alt="a teblet with a color palette on it"
@@ -112,69 +120,79 @@
         </div>
       </section>
 
-      <section class="team">
+      <section class="team section">
         <h2 class="team-title">Nasz zespół</h2>
 
-        <ul class="list">
-          <li class="team-card">
-            <img
-              src="images/img(4).jpg"
-              alt="smiling man"
-              width="270"
-              height="260"
-            />
-            <h3 class="team-name">John Doe</h3>
-            <p class="team-job">Product Designer</p>
-          </li>
-          <li class="team-card">
-            <img
-              src="images/img(5).jpg"
-              alt="smiling woman"
-              width="270"
-              height="260"
-            />
-            <h3 class="team-name">John Doe</h3>
-            <p class="team-job">Frontend Developer</p>
-          </li>
-          <li class="team-card">
-            <img
-              src="images/img(6).jpg"
-              alt="wide smiling man"
-              width="270"
-              height="260"
-            />
-            <h3 class="team-name">John Doe</h3>
-            <p class="team-job">Marketing</p>
-          </li>
-          <li class="team-card">
-            <img
-              src="images/img(7).jpg"
-              alt="man with glasses"
-              width="270"
-              height="260"
-            />
-            <h3 class="team-name">John Doe</h3>
-            <p class="team-job">UI Designer</p>
-          </li>
-        </ul>
+        <div class="container">
+          <ul class="team-list">
+            <li class="team-card">
+              <img
+                src="images/img(4).jpg"
+                alt="smiling man"
+                width="270"
+                height="260"
+              />
+              <h3 class="team-name">John Doe</h3>
+              <p class="team-job">Product Designer</p>
+            </li>
+            <li class="team-card">
+              <img
+                src="images/img(5).jpg"
+                alt="smiling woman"
+                width="270"
+                height="260"
+              />
+              <h3 class="team-name">John Doe</h3>
+              <p class="team-job">Frontend Developer</p>
+            </li>
+            <li class="team-card">
+              <img
+                src="images/img(6).jpg"
+                alt="wide smiling man"
+                width="270"
+                height="260"
+              />
+              <h3 class="team-name">John Doe</h3>
+              <p class="team-job">Marketing</p>
+            </li>
+            <li class="team-card">
+              <img
+                src="images/img(7).jpg"
+                alt="man with glasses"
+                width="270"
+                height="260"
+              />
+              <h3 class="team-name">John Doe</h3>
+              <p class="team-job">UI Designer</p>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
 
     <footer class="bottom">
-         <a class="logo-bottom" href="/">
-            <span class="logo-element">Web</span>Studio
+      <div class="container box-bottom">
+        <a class="logo-bottom" href="/">
+          <span class="logo-element">Web</span>Studio
         </a>
-     
-      <address class="address" id="address">m. Warszawa, Aleje Jerozolimskie 21</address>
 
-      <ul class="bottom-contacts">
-        <li>
-          <a class="bottom-contact link" href="mailto:info@example.com">info@example.com</a>
-        </li>
-        <li>
-          <a class="bottom-contact link" href="tel:+48111111111">+48 111 111 111</a>
-        </li>
-      </ul>
+        <address class="address" id="address">
+          m. Warszawa, Aleje Jerozolimskie 21
+        </address>
+
+        <ul class="bottom-contacts">
+          <li class="bottom-contact">
+            <a class="bottom-contact link" href="mailto:info@example.com"
+              >info@example.com</a
+            >
+          </li>
+          <li class="bottom-contact">
+            <a class="bottom-contact link" href="tel:+48111111111"
+              >+48 111 111 111</a
+            >
+          </li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>
