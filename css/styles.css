@@ -9,20 +9,19 @@ body {
   --gray: #757575;
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 ul {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
@@ -30,19 +29,25 @@ header {
   border-bottom: 1px solid #ececec;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  justify-content: center;
+}
+
 .container {
   width: 1200px;
   margin-left: 200px;
   margin-right: 200px;
-  justify-self: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  justify-content: center;
 }
 
 .headline {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .logo-top {
@@ -78,7 +83,6 @@ header {
 
 .menu-list,
 .top-contacts-list {
-  list-style: none;
   display: flex;
   justify-content: space-around;
   margin-bottom: 32px;
@@ -112,11 +116,13 @@ header {
 
 .top {
   background: #2f303a;
+}
+
+.top .container {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .top-title {
@@ -153,10 +159,8 @@ header {
 
 .text-list {
   display: flex;
-  list-style: none;
   justify-content: center;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin-bottom: 94px;
 }
 
 .text-list > li:not(:last-child) {
@@ -175,7 +179,7 @@ header {
   line-height: 171%;
   letter-spacing: 0.03em;
   color: var(--gray);
-  margin-bottom: 94px;
+  margin-top: 10px;
 }
 
 .gallery-title {
@@ -189,7 +193,6 @@ header {
 .gallery-list {
   display: flex;
   justify-content: center;
-  list-style: none;
 }
 
 .gallery-item:not(:last-child) {
@@ -212,7 +215,6 @@ header {
 .team-list {
   display: flex;
   justify-content: center;
-  list-style: none;
 }
 
 .team-card {
@@ -253,8 +255,6 @@ header {
 .box-bottom {
   display: flex;
   flex-direction: column;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .logo-bottom {
@@ -292,7 +292,6 @@ header {
 .button-list {
   display: flex;
   justify-content: center;
-  list-style: none;
   margin-bottom: 50px;
 }
 .button-item:not(:last-child) {
@@ -323,9 +322,6 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  list-style: none;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .portfolio-item {
