@@ -81,6 +81,10 @@ header {
   text-decoration: none;
 }
 
+.navigation-menu-list {
+  margin-right: auto;
+}
+
 .menu-list,
 .top-contacts-list {
   display: flex;
@@ -99,8 +103,23 @@ header {
   padding-right: 46px;
 }
 
+.top-contacts {
+  cursor: pointer;
+}
+
 .top-contacts:first-child {
-  margin-left: 371px;
+  margin-left: auto;
+  padding-right: 50px;
+}
+
+.contacts-icon {
+  margin-right: 10px;
+  fill: var(--gray);
+  
+}
+
+.contacts-icon:hover {
+  fill: var(--blue);
 }
 
 .top-contacts-link {
@@ -108,10 +127,6 @@ header {
   font-size: 14px;
   letter-spacing: 0.02em;
   color: var(--gray);
-}
-
-.top-contacts:not(:last-child) {
-  padding-right: 50px;
 }
 
 .top {
@@ -155,6 +170,13 @@ header {
 .top-button:focus {
   background-color: #f5f4fa;
   color: var(--blue);
+}
+
+.icon-box {
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
 }
 
 .text-list {
