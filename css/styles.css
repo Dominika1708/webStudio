@@ -1,7 +1,7 @@
 body {
   font-family: "Roboto", sans-serif;
   color: #212121;
-  width: 1600px;
+  max-width: 1600px;
 }
 
 :root {
@@ -114,12 +114,7 @@ header {
 
 .contacts-icon {
   margin-right: 10px;
-  fill: var(--gray);
-  
-}
-
-.contacts-icon:hover {
-  fill: var(--blue);
+  fill: currentColor;
 }
 
 .top-contacts-link {
@@ -131,6 +126,13 @@ header {
 
 .top {
   background: #2f303a;
+  background-image: linear-gradient(
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url(/images/background-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 1600px;
 }
 
 .top .container {
@@ -158,18 +160,21 @@ header {
   line-height: 188%;
   text-align: center;
   letter-spacing: 0.06em;
+  color: #ffffff;
+  border: 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  color: #ffffff;
   background-color: var(--blue);
   cursor: pointer;
   margin-bottom: 200px;
+  padding: 10px 41px;
 }
 
 .top-button:hover,
 .top-button:focus {
-  background-color: #f5f4fa;
-  color: var(--blue);
+  /* background-color: #f5f4fa; */
+   /* color: var(--blue);*/
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .icon-box {
@@ -266,7 +271,67 @@ header {
   letter-spacing: 0.03em;
   color: var(--gray);
   margin-top: 10px;
-  margin-bottom: 30px;
+}
+
+.team-socials {
+  display: flex;
+  margin: 16px 32px 30px;
+  justify-content: space-between;
+}
+
+.team-social-link,
+.bottom-social-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  color: #afb1b8;
+}
+
+.social-icon,
+.bottom-social-icon {
+  fill: currentColor;
+}
+
+.team-social-link:hover,
+.team-social-link:focus,
+.bottom-social-link:hover,
+.bottom-social-link:focus {
+  background-color: var(--blue);
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.client-icon {
+  fill: currentColor;
+  margin: 16px 32px;
+}
+
+.client-link {
+  display: flex;
+  color: #afb1b8;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.client-link:hover,
+.client-link:focus {
+  color: var(--blue);
+  border-color: var(--blue);
 }
 
 .bottom {
@@ -276,11 +341,18 @@ header {
 
 .box-bottom {
   display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.bottom-left {
+  display: flex;
   flex-direction: column;
 }
 
 .logo-bottom {
-  margin-top: 60px;
   margin-bottom: 20px;
 }
 
@@ -297,7 +369,6 @@ header {
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin-bottom: 60px;
 }
 
 .bottom-contact {
@@ -309,6 +380,33 @@ header {
 
 .bottom-contact:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.bottom-right {
+    margin-left: 70px;
+}
+
+.bottom-socials-list {
+  display: flex;
+}
+
+.bottom-socials-title {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.bottom-social-link {
+  color: #ffffff;
+  background-color: #ffffff1a;
+  border-radius: 50%;
+}
+
+.bottom-social:not(:last-child) {
+  margin-right: 10px;
 }
 
 .button-list {
@@ -327,6 +425,7 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
   background: #f5f4fa;
+  border: 0;
   border-radius: 4px;
   padding: 6px 22px;
   cursor: pointer;
@@ -351,7 +450,15 @@ header {
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
+  cursor: pointer;
 }
+
+.portfolio-item:hover,
+.portfolio-item:focus  {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+  0px 4px 4px rgba(0, 0, 0, 0.06),
+  1px 4px 6px rgba(0, 0, 0, 0.16)
+  }
 
 .portfolio-item:not(:nth-child(3n)) {
   margin-right: 30px;
