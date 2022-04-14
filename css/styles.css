@@ -125,6 +125,8 @@ header {
     rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)),
     url("../images/background-img.jpg");
+    max-width: 1600px;
+    margin: 0 auto;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #2f303a;
