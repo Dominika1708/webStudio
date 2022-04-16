@@ -75,6 +75,7 @@ header {
 
 .link {
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-menu-list {
@@ -85,7 +86,6 @@ header {
 .top-contacts-list {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 32px;
 }
 
 .menu-link {
@@ -93,6 +93,25 @@ header {
   font-size: 14px;
   letter-spacing: 0.02em;
   color: #212121;
+}
+
+.home-page::after,
+.portfolio-page::after {
+  content: "";
+  display: flex;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--blue);
+  margin-top: 28px;
+  position: relative;
+  bottom: -1px;
+  left: 0;
+}
+
+.home-page,
+.portfolio-page {
+  color: var(--blue);
 }
 
 .menu:not(:last-child) {
@@ -122,14 +141,15 @@ header {
 
 .top {
   background-image: linear-gradient(
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)),
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
     url("../images/background-img.jpg");
-    max-width: 1600px;
-    margin: 0 auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #2f303a;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #2f303a;
 }
 
 .top .container {
@@ -165,12 +185,15 @@ header {
   cursor: pointer;
   margin-bottom: 200px;
   padding: 10px 41px;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .top-button:hover,
 .top-button:focus {
   /* background-color: #f5f4fa; */
-   /* color: var(--blue);*/
+  /* color: var(--blue);*/
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -221,6 +244,29 @@ header {
 
 .gallery-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-label {
+  width: 100%;
+  background-color: rgba(47, 48, 58, 0.8);
+  padding: 27px 0;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+}
+
+.label-text {
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 .team {
@@ -283,7 +329,11 @@ header {
   height: 44px;
   justify-content: center;
   align-items: center;
+    border-radius: 50%;
   color: #afb1b8;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon,
@@ -296,7 +346,6 @@ header {
 .bottom-social-link:hover,
 .bottom-social-link:focus {
   background-color: var(--blue);
-  border-radius: 50%;
   color: #ffffff;
 }
 
@@ -323,6 +372,9 @@ header {
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition-property: color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -380,7 +432,7 @@ header {
 }
 
 .bottom-right {
-    margin-left: 70px;
+  margin-left: 70px;
 }
 
 .bottom-socials-list {
@@ -426,12 +478,15 @@ header {
   border-radius: 4px;
   padding: 6px 22px;
   cursor: pointer;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-menu:hover,
 .button-menu:focus {
   color: #ffffff;
-  background: var(--blue);
+  background-color: var(--blue);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -448,14 +503,16 @@ header {
   border: 1px solid #eeeeee;
   box-sizing: border-box;
   cursor: pointer;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover,
-.portfolio-item:focus  {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-  0px 4px 4px rgba(0, 0, 0, 0.06),
-  1px 4px 6px rgba(0, 0, 0, 0.16)
-  }
+.portfolio-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .portfolio-item:not(:nth-child(3n)) {
   margin-right: 30px;
@@ -463,6 +520,35 @@ header {
 
 .portfolio-item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
+}
+
+.portfolio-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item:hover .box-overlay,
+.portfolio-item:focus .box-overlay {
+  transform: translateY(0);
+}
+
+.box-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 49px 45px 49px 24px;
+  background-color: #2196f3e5;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-text {
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  color: #ffffff;
 }
 
 .portfolio-title {
@@ -479,4 +565,68 @@ header {
   letter-spacing: 0.03em;
   color: var(--gray);
   margin: 4px 24px 20px;
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+}
+
+.backdrop:not(.is-hidden) {
+  background-color: #00000033;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  min-height: 581px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition-property: transform;
+}
+
+.backdrop:not(.is-hidden) .modal {
+  animation-name: move;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(100%, 100%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.close-btn {
+  display: flex;
+  padding: 6px;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
 }
