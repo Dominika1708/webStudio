@@ -28,7 +28,9 @@
           <nav class="navigation-menu-list">
             <ul class="menu-list">
               <li class="menu">
-                <a class="menu-link home-page  link" href="./index.html">Agencja</a>
+                <a class="menu-link home-page link" href="./index.html"
+                  >Agencja</a
+                >
               </li>
               <li class="menu">
                 <a class="menu-link link" href="./portfolio.html">Portfolio</a>
@@ -64,7 +66,9 @@
         <div class="container">
           <h1 class="top-title">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
 
-          <button type="button" class="top-button" data-modal-open>Zamów usługe</button>
+          <button type="button" class="top-button" data-modal-open>
+            Zamów usługe
+          </button>
         </div>
       </div>
 
@@ -410,7 +414,7 @@
             </ul>
           </section>
 
-          <section class="bottom-right">
+          <section class="bottom-center">
             <h4 class="bottom-socials-title">Dołącz do nas</h4>
 
             <ul class="bottom-socials-list">
@@ -444,6 +448,26 @@
               </li>
             </ul>
           </section>
+
+          <section class="bottom-right">
+            <form class="newsletter-form" name="newsletter-form">
+              <label class="newsletter-label">
+                Zapisz się do newslettera
+                <input
+                  class="newsletter-input"
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                />
+              </label>
+              <button class="newsletter-btn" type="submit">
+                Zapisz się
+                <svg class="send-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </form>
+          </section>
         </div>
       </div>
     </footer>
@@ -455,6 +479,63 @@
             <use href="./images/icons.svg#icon-close-btn"></use>
           </svg>
         </button>
+        <form name="modal-form" class="modal-form">
+          <p class="modal-title">Zostaw swoje dane w formularzu poniżej</p>
+          <label class="label-up">
+            Imie
+            <div class="label-box">
+              <svg class="label-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+              <input class="label-space" type="text" name="name" required />
+            </div>
+          </label>
+          <label class="label-up">
+            Telefon
+            <div class="label-box">
+              <svg class="label-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+              <input class="label-space" type="tel" name="phone" required />
+            </div>
+          </label>
+          <label class="label-up">
+            Email
+            <div class="label-box">
+              <svg class="label-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+              <input class="label-space" type="email" name="email" required />
+            </div>
+          </label>
+          <label class="label-up">
+            Komentarz
+            <textarea
+              class="text-space"
+              name="comments"
+              rows="5"
+              placeholder="Wprowadź tekst"
+            ></textarea>
+          </label>
+          <div class="policy-box">
+            <input
+              class="checkbox-input"
+              type="checkbox"
+              name="policy"
+              value="accepted-policy"
+              id="policy"
+              required
+            />
+            <label class="label-checkbox" for="policy">
+              <svg class="checkbox-icon" width="16" height="15">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
+              Oświadczam iż akceptuję <a href="#">Regulamin</a> i
+              <a href="#">Politykę Prywatności.</a>
+            </label>
+          </div>
+          <button class="form-btn" type="submit">Wyślij</button>
+        </form>
       </div>
     </div>
 

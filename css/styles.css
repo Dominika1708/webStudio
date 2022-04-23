@@ -390,7 +390,7 @@ header {
 
 .box-bottom {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: baseline;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -431,10 +431,6 @@ header {
   margin-bottom: 9px;
 }
 
-.bottom-right {
-  margin-left: 70px;
-}
-
 .bottom-socials-list {
   display: flex;
 }
@@ -456,6 +452,74 @@ header {
 
 .bottom-social:not(:last-child) {
   margin-right: 10px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.newsletter-label {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-input {
+  margin-top: 20px;
+  margin-right: 12px;
+  outline: none;
+  padding: 15px 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  width: 358px;
+}
+
+.newsletter-input:placeholder-shown {
+  font-size: 16px;
+  line-height: 125%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-input:not(:placeholder-shown) {
+  color: #fff;
+  font-size: 16px;
+  line-height: 125%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+}
+
+.newsletter-btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 188%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: var(--blue);
+  padding: 10px 28px 10px 42px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-icon {
+  margin-left: 24px;
 }
 
 .button-list {
@@ -623,5 +687,148 @@ header {
   position: absolute;
   top: 8px;
   right: 8px;
+  cursor: pointer;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 12px;
+}
+
+.label-up {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.label-up :placeholder-shown {
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.label-box {
+  display: flex;
+  position: relative;
+}
+
+.label-icon {
+  position: absolute;
+  margin: 11px 12px;
+  top: 4px;
+  left: 0;
+  color: currentColor;
+}
+
+.label-up:focus-within .label-icon {
+  fill: var(--blue);
+}
+
+.label-space {
+  padding: 12px 42px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.text-space {
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  resize: none;
+}
+
+.text-space,
+.label-space {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-space:focus-within,
+.label-space:focus-within,
+.text-space:focus-visible,
+.label-space:focus-visible {
+  border: 1px solid var(--blue);
+  outline: none;
+}
+
+.policy-box {
+  position: relative;
+  margin-bottom: 30px;
+  align-self: center;
+}
+
+.checkbox-input {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.label-checkbox {
+  font-size: 14px;
+  line-height: 171%;
+  letter-spacing: 0.03em;
+  color: #757575;
+  cursor: pointer;
+}
+
+.label-checkbox::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  position: absolute;
+  top: 9px;
+  left: 0px;
+  transform: translateY(-50%);
+  z-index: 100;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #fff;
+}
+
+.checkbox-icon {
+  margin-right: 8px;
+}
+
+.checkbox-input:checked + .label-checkbox::before {
+  border: var(--blue);
+  background-color: var(--blue);
+  z-index: -100;
+}
+
+.form-btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 188%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: var(--blue);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+  width: 200px;
+  padding: 10px 76px;
+  align-self: center;
   cursor: pointer;
 }
