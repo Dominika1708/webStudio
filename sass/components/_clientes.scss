@@ -1,0 +1,25 @@
+.clients {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients__icon {
+    fill: currentColor;
+    margin: 16px 32px;
+}
+
+.clients__link {
+    display: flex;
+    color: #afb1b8;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    transition-property: color, border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients__link:hover,
+.clients__link:focus {
+    color: var(--blue);
+    border-color: var(--blue);
+}
