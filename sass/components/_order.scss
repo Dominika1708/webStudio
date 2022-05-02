@@ -1,128 +1,84 @@
 .order {
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-}
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
 
-.order__title {
+  &__title {
     font-weight: 700;
     font-size: 20px;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: getColor(primary);
     margin-bottom: 12px;
-}
+  }
 
-.order__label {
+  &__label {
     display: flex;
     flex-direction: column;
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.01em;
-    color: #757575;
-}
+    color: getColor(secondary);
 
-.order__label:placeholder-shown {
-    font-size: 12px;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-}
+    &:placeholder-shown {
+      font-size: 12px;
+      letter-spacing: 0.01em;
+      color: getColor(secondaryHalf);
+    }
+  }
 
-.order__box {
+  &__box {
     display: flex;
     position: relative;
-}
+  }
 
-.order__icon {
+  &__icon {
     position: absolute;
     margin: 11px 12px;
     top: 4px;
     left: 0;
     color: currentColor;
-}
 
-.order__label:focus-within .order__icon {
-    fill: var(--blue);
-}
+    .order__label:focus-within & {
+      fill: getColor(accent);
+    }
+  }
 
-.order__input {
+  &__input {
     padding: 12px 42px;
     width: 100%;
     margin-bottom: 10px;
-}
-
-.order__textarea {
-    padding: 12px 16px;
-    margin-bottom: 20px;
-    resize: none;
-}
-
-.order__textarea,
-.order__input {
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid getBG(borderOnLight);
     box-sizing: border-box;
     border-radius: 4px;
     margin-top: 4px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.order__textarea:focus-within,
-.order__input:focus-within,
-.order__textarea:focus-visible,
-.order__input:focus-visible {
-    border: 1px solid var(--blue);
-    outline: none;
-}
+    &:focus-within,
+    &:focus-visible {
+      border: 1px solid getColor(accent);
+      outline: none;
+    }
+  }
 
-.policy {
-    position: relative;
-    margin-bottom: 30px;
-    align-self: center;
-}
+  &__textarea {
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    resize: none;
+    border: 1px solid getBG(borderOnLight);
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-top: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-.policy__input {
-    opacity: 0;
-    cursor: pointer;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-}
+    &:focus-within,
+    &:focus-visible {
+      border: 1px solid getColor(accent);
+      outline: none;
+    }
+  }
 
-.policy__label {
-    font-size: 14px;
-    line-height: 171%;
-    letter-spacing: 0.03em;
-    color: #757575;
-    cursor: pointer;
-}
-
-.policy__label::before {
-    content: "";
-    display: block;
-    width: 16px;
-    height: 15px;
-    border: 2px solid #212121;
-    border-radius: 2px;
-    position: absolute;
-    top: 9px;
-    left: 0px;
-    transform: translateY(-50%);
-    z-index: 100;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: #fff;
-}
-
-.policy__icon {
-    margin-right: 8px;
-}
-
-.policy__input:checked+.policy__label::before {
-    border: var(--blue);
-    background-color: var(--blue);
-    z-index: -100;
-}
-
-.order__button {
+  &__button {
     font-weight: 700;
     font-size: 16px;
     line-height: 188%;
@@ -130,8 +86,8 @@
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    color: #ffffff;
-    background-color: var(--blue);
+    color: getColor(clear);
+    background-color: getColor(accent);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: 0;
@@ -139,4 +95,53 @@
     padding: 10px 76px;
     align-self: center;
     cursor: pointer;
+  }
+}
+
+.policy {
+  position: relative;
+  margin-bottom: 30px;
+  align-self: center;
+
+  &__input {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+
+  &__label {
+    font-size: 14px;
+    line-height: 171%;
+    letter-spacing: 0.03em;
+    color: getColor(secondary);
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 15px;
+      border: 2px solid getColor(primary);
+      border-radius: 2px;
+      position: absolute;
+      top: 9px;
+      left: 0px;
+      transform: translateY(-50%);
+      z-index: 100;
+      transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      background-color: getColor(clear);
+    }
+
+    .policy__input:checked + &::before {
+      border: getColor(accent);
+      background-color: getColor(accent);
+      z-index: -100;
+    }
+  }
+
+  &__icon {
+    margin-right: 8px;
+  }
 }

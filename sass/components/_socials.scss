@@ -1,12 +1,13 @@
 .socials {
-    display: flex;
-}
+  display: flex;
 
-.socials__item:not(:last-child) {
-    margin-right: 10px;
-}
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
 
-.socials__link {
+  &__link {
     display: flex;
     width: 44px;
     height: 44px;
@@ -16,23 +17,24 @@
     transition-property: background-color, color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.socials__link--light {
-    color: #afb1b8;
-}
+    &--light {
+      color: getColor(icon);
+    }
 
-.socials__link--dark {
-    color: #ffffff;
-    background-color: #ffffff1a;
-}
+    &--dark {
+      color: getColor(clear);
+      background-color: getBG(light);
+    }
 
-.socials__link:hover,
-.socials__link:focus {
-    background-color: var(--blue);
-    color: #ffffff;
-}
+    &:hover,
+    &:focus {
+      background-color: getColor(accent);
+      color: getColor(clear);
+    }
+  }
 
-.socials__icon {
+  &__icon {
     fill: currentColor;
+  }
 }

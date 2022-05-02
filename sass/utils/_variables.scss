@@ -1,4 +1,38 @@
-:root {
-    --blue: #2196f3;
-    --gray: #757575;
+$fonts: (
+    'primary': "Roboto",
+    'secondary': "Raleway",
+);
+
+@function getFont($key) {
+    @return map-get($fonts, $key )
+}
+
+$colors: (
+    'primary': #212121,
+    'secondary': #757575,
+    'secondaryHalf': #75757580,         //50% secondary
+    'accent': #2196F3,
+    'icon': #AFB1B8,
+    'clear': #FFFFFF,
+    'light': #FFFFFF99,                //60% clear
+);
+
+@function getColor($key) {
+    @return map-get($colors, $key)
+}
+
+$background: (
+    'primary': #F5F4FA,
+    'secondary': #2F303A,
+    'cover': #2F303ACC,                //80% secondary
+    'overlay': #2F303A66,              //40% secondary
+    'borderOnDark': #FFFFFF4D,         //30% FFFFFF
+    'light': #FFFFFF1A,                //10% FFFFFF
+    'borderOnLight': #21212133,        //20% $colors primary
+    'accent': #2196F3E5,               //90% $colors accent
+    'backdrop':#00000033,              //20% 000000
+);
+
+@function getBG($key) {
+    @return map-get($background, $key)
 }

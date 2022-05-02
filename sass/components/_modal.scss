@@ -1,52 +1,35 @@
 .backdrop {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #00000033;
-    opacity: 1;
-    transition-property: opacity;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: getBG(backdrop);
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-.backdrop.is-hidden {
+  &.is-hidden {
     opacity: 0;
     pointer-events: none;
+  }
 }
 
 .modal {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 528px;
-    min-height: 581px;
-    background-color: #ffffff;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    transition-property: transform;
-}
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  min-height: 581px;
+  background-color: getColor(clear);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition-property: transform;
 
-.backdrop:not(.is-hidden) .modal {
-    animation-name: move;
-    animation-duration: 500ms;
-    animation-timing-function: ease-in;
-}
-
-@keyframes move {
-    0% {
-        transform: translate(100%, 100%);
-    }
-
-    100% {
-        transform: translate(-50%, -50%);
-    }
-}
-
-.modal__button {
+  &__button {
     display: flex;
     padding: 6px;
     background-color: transparent;
@@ -56,4 +39,11 @@
     top: 8px;
     right: 8px;
     cursor: pointer;
+  }
+
+  .backdrop:not(.is-hidden) & {
+    animation-name: move;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+  }
 }

@@ -1,70 +1,79 @@
 .header {
-    border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 .headline {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 
+  &__logo {
+    color: inherit;
+    margin-top: 24px;
+    margin-right: 93px;
+    margin-bottom: 25px;
+  }
 
-.navigation {
-    margin-right: auto;
-}
-
-.navigation__list,
-.headline__list {
+  &__list {
     display: flex;
     justify-content: space-around;
-}
+  }
 
-.navigation__link {
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 0.02em;
-    color: #212121;
-}
-
-.navigation__item:not(:last-child) {
-    padding-right: 46px;
-}
-
-
-.navigation__link--current::after {
-    content: "";
-    display: flex;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--blue);
-    margin-top: 28px;
-    position: relative;
-    bottom: -1px;
-    left: 0;
-}
-
-.navigation__link--current {
-    color: var(--blue);
-}
-
-.headline__item {
+  &__item {
     cursor: pointer;
-}
 
-.headline__item:first-child {
-    margin-left: auto;
-    padding-right: 50px;
-}
+    &:first-child {
+      margin-left: auto;
+      padding-right: 50px;
+    }
+  }
 
-.headline__icon {
+  &__icon {
     margin-right: 10px;
     fill: currentColor;
-}
+  }
 
-.headline__link {
+  &__link {
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.02em;
-    color: var(--gray);
+    color: getColor(secondary);
+  }
+}
+
+.navigation {
+  margin-right: auto;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__item:not(:last-child) {
+    padding-right: 46px;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: getColor(primary);
+
+    &--current {
+      color: getColor(accent);
+    }
+
+    &--current::after {
+      content: "";
+      display: flex;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: getColor(accent);
+      margin-top: 28px;
+      position: relative;
+      bottom: -1px;
+      left: 0;
+    }
+  }
 }

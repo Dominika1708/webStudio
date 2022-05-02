@@ -1,8 +1,8 @@
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
+  padding-top: 94px;
+  padding-bottom: 94px;
 
-.section--team {
-    background: #f5f4fa;
+  &--team {
+    background: getBG(primary);
+  }
 }
