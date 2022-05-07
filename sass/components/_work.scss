@@ -1,31 +1,41 @@
 .work {
-  display: flex;
-  justify-content: center;
+  display: none;
+}
 
-  &__item {
-    position: relative;
-    overflow: hidden;
-
-    &:not(:last-child) {
-      margin-right: 30px;
+  @media screen and (min-width: 1200px) {
+  .work {
+    display: block;
+    
+    &__list {
+    display: flex;
+    justify-content: center;
     }
-  }
 
-  &__label {
-    width: 100%;
-    background-color: getBG(cover);
-    padding: 27px 0;
-    position: absolute;
-    bottom: 4px;
-    left: 0;
-  }
+    &__item {
+      position: relative;
+      overflow: hidden;
 
-  &__text {
-    font-weight: 700;
-    font-size: 14px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: getColor(clear);
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+    &__label {
+      width: 100%;
+      background-color: getBG(cover);
+      padding: 27px 0;
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+    }
+
+    &__text {
+      font-weight: 700;
+      font-size: 14px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: getColor(clear);
+    }
   }
 }

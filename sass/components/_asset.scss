@@ -1,19 +1,14 @@
 .asset {
-  display: flex;
   justify-content: center;
-  margin-bottom: 94px;
 
   &__box {
     padding: 25px 100px;
     margin-bottom: 30px;
     background-color: getBG(primary);
     border-radius: 4px;
-  }
-
-  &__item {
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__title {
@@ -23,11 +18,61 @@
   }
 
   &__content {
-    width: 270px;
     font-size: 14px;
     line-height: 171%;
     letter-spacing: 0.03em;
     color: getColor(secondary);
     margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .asset {
+    &__title {
+      text-align: center;
+    }
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .asset {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      flex-basis: calc(100% / 2);
+
+      &:nth-child(-n + 2) {
+        margin-bottom: 30px;
+      }
+
+      &:nth-child(2n + 1) {
+        padding-right: 15px;
+      }
+
+      &:nth-child(2n) {
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .asset {
+    display: flex;
+    margin-bottom: 94px;
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+    &__content {
+      width: 270px;
+    }
   }
 }
