@@ -55,7 +55,7 @@
 
     &__card {
       width: 354px;
-      flex-basis: calc(100% / 2 - 60px);
+      flex-basis: calc(100vw / 2 - 60px);
     }
   }
 }

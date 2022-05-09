@@ -9,14 +9,43 @@
     flex-direction: column;
     justify-content: center;
   }
+
+  &--footer {
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+    
 }
 
-@media screen and (nim-width:1200px) {
+
+@media screen and (max-width: 768px) {
+  .container {
+
+    &--footer {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px)  {
+  .container {
+
+    &--footer {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+
+@media screen and (min-width:1200px) {
 
   .container {
 
     &--footer {
-      display: flex;
       justify-content: space-between;
       align-items: baseline;
       padding-top: 60px;
