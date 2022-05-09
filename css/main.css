@@ -472,10 +472,10 @@ p {
 .team {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .team__card {
-  width: 270px;
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -483,10 +483,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.team__card:not(:last-child) {
-  margin-right: 30px;
+  max-width: fit-content;
 }
 
 .team__name {
@@ -506,18 +503,57 @@ p {
   margin-bottom: 16px;
 }
 
+@media screen and (max-width: 768px) {
+  .team {
+    flex-direction: column;
+  }
+  .team__card {
+    width: 450px;
+  }
+  .team__card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .team {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .team__card {
+    width: 354px;
+    flex-basis: calc(100% / 2 - 60px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    justify-content: center;
+  }
+  .team__card {
+    width: 270px;
+  }
+  .team__card:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
 .clients {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
+  justify-content: center;
 }
 
 .clients__icon {
   fill: currentColor;
-  margin: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .clients__link {
   display: flex;
+  height: 92px;
   color: #AFB1B8;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
@@ -529,6 +565,46 @@ p {
 .clients__link:hover, .clients__link:focus {
   color: #2196F3;
   border-color: #2196F3;
+}
+
+@media screen and (max-width: 768px) {
+  .clients {
+    flex-wrap: wrap;
+  }
+  .clients__icon {
+    margin: 16px 52px;
+  }
+  .clients__link {
+    width: 210px;
+  }
+  .clients__item {
+    flex-basis: calc(100% / 2- 30px);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .clients {
+    flex-wrap: wrap;
+  }
+  .clients__icon {
+    margin: 16px 60px;
+  }
+  .clients__link {
+    width: 226px;
+  }
+  .clients__item {
+    flex-basis: calc(100% / 3 - 90px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__icon {
+    fill: currentColor;
+    margin: 16px 32px;
+  }
+  .clients__link {
+    width: 170px;
+  }
 }
 
 .footer {

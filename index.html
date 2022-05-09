@@ -212,7 +212,8 @@
             <ul class="work__list">
               <li class="work__item">
                 <img
-                  src="images/img(1).jpg"
+                  src="images/img-1.jpg"
+                  srcset="images/img-1@2x.jpg 2x"
                   alt="a person writing code on a tablet"
                   width="370"
                   height="294"
@@ -223,7 +224,8 @@
               </li>
               <li class="work__item">
                 <img
-                  src="images/img(2).jpg"
+                  src="images/img-2.jpg"
+                  srcset="images/img-2@2x.jpg 2x"
                   alt="a person looking at the phone in front of a computer"
                   width="370"
                   height="294"
@@ -234,7 +236,8 @@
               </li>
               <li class="work__item">
                 <img
-                  src="images/img(3).jpg"
+                  src="images/img-3.jpg"
+                  srcset="images/img-3@2x.jpg 2x"
                   alt="a teblet with a color palette on it"
                   width="370"
                   height="294"
@@ -248,18 +251,29 @@
         </div>
       </section>
 
+<!-- TEAM -->
+
       <section class="section section--team">
         <div class="container">
           <h2 class="title">Nasz zespół</h2>
 
           <ul class="team">
             <li class="team__card">
-              <img
-                src="images/img(4).jpg"
-                alt="smiling man"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source srcset="images/team/team1mobile-450.jpg 450w, images/team/team1mobile-900.jpg 900w"
+                media="(max-width: 768px)"
+                sizes="(min-width: 450px) 450px, 100vw">
+                <source srcset="images/team/team1tablet-354.jpg 354w, images/team/team1tablet-708.jpg 708w"
+                media="(min-width: 769px) and (max-width: 1199px)"
+                sizes="(min-width: 354px) 354px, 100vw">
+                <source srcset="images/team/team1desktop-270.jpg 270w, images/team/team1desktop-540.jpg 540w"
+                media="(min-width: 1199px)"
+                sizes="(min-width: 270px) 270px, 100vw">
+                <img
+                src="images/team/team1mobile-450.jpg"
+                alt="smiling man"/>
+              </picture>
+              
               <h3 class="team__name">John Doe</h3>
               <p class="team__job">Product Designer</p>
               <ul class="socials">
@@ -294,12 +308,21 @@
               </ul>
             </li>
             <li class="team__card">
-              <img
-                src="images/img(5).jpg"
-                alt="smiling woman"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source srcset="images/team/team2mobile-450.jpg 450w, images/team/team2mobile-900.jpg 900w"
+                media="(max-width: 768px)"
+                sizes="(min-width: 450px) 450px, 100vw">
+                <source srcset="images/team/team2tablet-354.jpg 354w, images/team/team2tablet-708.jpg 708w"
+                media="(min-width: 769px) and (max-width: 1199px)"
+                sizes="(min-width: 354px) 354px, 100vw">
+                <source srcset="images/team/team2desktop-270.jpg 270w, images/team/team2desktop-540.jpg 540w"
+                media="(min-width: 1199px)"
+                sizes="(min-width: 270px) 270px, 100vw">
+                <img
+                src="images/team/team2mobile-450.jpg"
+                alt="smiling woman"/>
+              </picture>
+           
               <h3 class="team__name">John Doe</h3>
               <p class="team__job">Frontend Developer</p>
               <ul class="socials">
@@ -334,12 +357,21 @@
               </ul>
             </li>
             <li class="team__card">
-              <img
-                src="images/img(6).jpg"
-                alt="wide smiling man"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source srcset="images/team/team3mobile-450.jpg 450w, images/team/team3mobile-900.jpg 900w"
+                media="(max-width: 768px)"
+                sizes="(min-width: 450px) 450px, 100vw">
+                <source srcset="images/team/team3tablet-354.jpg 354w, images/team/team3tablet-708.jpg 708w"
+                media="(min-width: 769px) and (max-width: 1199px)"
+                sizes="(min-width: 354px) 354px, 100vw">
+                <source srcset="images/team/team3desktop-270.jpg 270w, images/team/team3desktop-540.jpg 540w"
+                media="(min-width: 1199px)"
+                sizes="(min-width: 270px) 270px, 100vw">
+                <img
+                src="images/team/team3mobile-450.jpg"
+                alt="wide smiling man"/>
+              </picture>
+              
               <h3 class="team__name">John Doe</h3>
               <p class="team__job">Marketing</p>
               <ul class="socials">
@@ -374,12 +406,21 @@
               </ul>
             </li>
             <li class="team__card">
-              <img
-                src="images/img(7).jpg"
-                alt="man with glasses"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source srcset="images/team/team4mobile-450.jpg 450w, images/team/team4mobile-900.jpg 900w"
+                media="(max-width: 768px)"
+                sizes="(min-width: 450px) 450px, 100vw">
+                <source srcset="images/team/team4tablet-354.jpg 354w, images/team/team4tablet-708.jpg 708w"
+                media="(min-width: 769px) and (max-width: 1199px)"
+                sizes="(min-width: 354px) 354px, 100vw">
+                <source srcset="images/team/team4desktop-270.jpg 270w, images/team/team4desktop-540.jpg 540w"
+                media="(min-width: 1199px)"
+                sizes="(min-width: 270px) 270px, 100vw">
+                <img
+                src="images/team/team4mobile-450.jpg"
+                alt="man with glasses"/>
+              </picture>
+              
               <h3 class="team__name">John Doe</h3>
               <p class="team__job">UI Designer</p>
               <ul class="socials">
@@ -422,44 +463,44 @@
           <h2 class="title">Nasi klienci</h2>
 
           <ul class="clients">
-            <li>
+            <li class="clients__item">
               <a class="clients__link" href="#">
-                <svg class="clients__icon" width="106" height="60.04">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg#icon-logo-yaco"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients__item">
               <a class="clients__link" href="#">
-                <svg class="clients__icon" width="106" height="60.04">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg#icon-logo-tagline-here"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients__item">
               <a class="clients__link" href="#">
-                <svg class="clients__icon" width="106" height="60.04">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg#icon-logo-company"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients__item">
               <a class="clients__link" href="#">
-                <svg class="clients__icon" width="106" height="60.04">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg#icon-logo-foster-peters"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients__item">
               <a class="clients__link" href="#">
-                <svg class="clients__icon" width="106" height="60.04">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg#icon-logo-brand"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients__item">
               <a class="clients__link" href="#">
-                <svg class="clients__icon" width="106" height="60.04">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="./images/icons.svg#icon-logo-tag-line"></use>
                 </svg>
               </a>

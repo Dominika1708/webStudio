@@ -1,14 +1,18 @@
 .clients {
   display: flex;
-  justify-content: space-between;
+  gap: 30px;
+  justify-content: center;
 
   &__icon {
     fill: currentColor;
-    margin: 16px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__link {
     display: flex;
+    height: 92px;
     color: getColor(icon);
     border: 1px solid getColor(icon);
     border-radius: 4px;
@@ -20,6 +24,61 @@
     &:focus {
       color: getColor(accent);
       border-color: getColor(accent);
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .clients {
+    flex-wrap: wrap;
+
+    &__icon {
+      margin: 16px 52px;
+    }
+
+    &__link {
+      width: 210px;
+    }
+
+    &__item {
+      flex-basis: calc(100% / 2- 30px);
+    }
+  }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+ 
+  .clients {
+    flex-wrap: wrap;
+
+    &__icon {
+      margin: 16px 60px;
+    }
+
+    &__link {
+      width: 226px;
+    }
+
+    &__item {
+      flex-basis: calc(100% / 3 - 90px);
+    }
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  
+  .clients {
+    &__icon {
+      fill: currentColor;
+      margin: 16px 32px;
+    }
+
+    &__link {
+      width: 170px;
     }
   }
 }
