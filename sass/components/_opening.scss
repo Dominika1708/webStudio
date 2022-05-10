@@ -9,7 +9,7 @@
   background-color: getBG(secondary);
 
   &__title {
-    width: 365px;
+    max-width: 365px;
     font-weight: 900;
     font-size: 26px;
     line-height: 162%;

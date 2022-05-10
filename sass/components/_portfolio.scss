@@ -5,7 +5,6 @@
   gap: 30px;
 
   &__item {
-    width: 370px;
     background: getColor(clear);
     border: 1px solid #eeeeee;
     box-sizing: border-box;
@@ -67,14 +66,27 @@
   }
 }
 
+
 @media screen and (min-width: 769px) and (max-width: 1199px) {
   .portfolio {
     width: 738px;
     justify-content: flex-start;
+
+    &__item {
+      width: 354px;
+    }
   }
 
   .wrap {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    &__item {
+      width: 370px;
+    }
   }
 }
