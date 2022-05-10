@@ -9,7 +9,6 @@
   background-color: getBG(secondary);
 
   &__title {
-    max-width: 365px;
     font-weight: 900;
     font-size: 26px;
     line-height: 162%;
@@ -46,9 +45,16 @@
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .opening {
+    &__title {
+      max-width: 365px;
+    }
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .opening {
-      
     &__title {
       width: 696px;
       font-size: 44px;
@@ -57,7 +63,7 @@
     }
 
     &__button {
-    margin-bottom: 200px;
+      margin-bottom: 200px;
     }
   }
 }
